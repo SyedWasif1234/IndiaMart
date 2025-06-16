@@ -1,9 +1,9 @@
 <?php
 
-require_once _DIR_ . '/../core/Request.php';
-require_once _DIR_ . '/../core/Router.php';
-require_once _DIR_ . '/../controllers/HomeController.php';
-require_once _DIR_ . '/../routes.php';
+require_once __DIR__ . '/../core/Request.php';
+require_once __DIR__ . '/../core/Router.php';
+require_once __DIR__ . '/../src/controllers/HomeController.php';
+require_once __DIR__ . '/../routes.php';
 
 use Core\Router;
 use Core\Request;
