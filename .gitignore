@@ -1,0 +1,6 @@
+uploads/
+*.log
+*.env
+vendor/
+node_modules/
+composer.lock
