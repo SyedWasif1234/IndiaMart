@@ -32,11 +32,15 @@ switch (true) {
         break;
 
     case preg_match('/^inquiries/', $endpoint):
-        require_once __DIR__ . '/routes/inquiry.model.php';
+        require_once __DIR__ . '/routes/inquiry.router.php';
         break;
 
     case preg_match('/^admin/', $endpoint):
         require_once __DIR__ . '/routes/admin.router.php';
+        break;
+
+    case preg_match('/^categories/', $endpoint): // ✅ Add this
+        require_once __DIR__ . '/routes/category.router.php';
         break;
 
     default:
