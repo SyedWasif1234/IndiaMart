@@ -1,13 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IndiaMART UI Clone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <img src="https://seeklogo.com/images/I/indiamart-logo-31F93002F7-seeklogo.com.png" class="logo" alt="IndiaMART Logo">
+      <input type="text" class="search-bar" placeholder="Enter product / service to search">
+      <button class="search-btn">🔍 Search</button>
+    </div>
+  </header>
+
+  <section class="categories">
+    <h2>Categories You May Like</h2>
+    <div class="category-list">
+      <div class="category-card">
+        <img src="https://m.media-amazon.com/images/I/61VfL-aiToL._AC_UL480_FMwebp_QL65_.jpg" alt="Phone">
+        <p>Realme Smart Phone</p>
+        <button>Get Quotes</button>
+      </div>
+      <div class="category-card">
+        <img src="https://m.media-amazon.com/images/I/51NbL2zCSSL._AC_UL480_FMwebp_QL65_.jpg" alt="Gadgets">
+        <p>Electronic Gadgets</p>
+        <button>Get Quotes</button>
+      </div>
+      <div class="category-card">
+        <img src="https://m.media-amazon.com/images/I/51j6x-P8kQL._AC_UL480_FMwebp_QL65_.jpg" alt="Battery">
+        <p>Laptop Battery</p>
+        <button>Get Quotes</button>
+      </div>
+      <div class="category-card">
+        <img src="https://m.media-amazon.com/images/I/61IMRs+o0iL._AC_UL480_FMwebp_QL65_.jpg" alt="Medicine">
+        <p>Generic Medicines</p>
+        <button>Get Quotes</button>
+      </div>
+      <div class="category-card">
+        <img src="https://m.media-amazon.com/images/I/51c-IMjW9wL._AC_UL480_FMwebp_QL65_.jpg" alt="Gloves">
+        <p>Surgical Gloves</p>
+        <button>Get Quotes</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="login-prompt">
+    <h3>Welcome Back!</h3>
+    <p>Please log in to access your personalized dashboard</p>
+    <ul>
+      <li>✔️ Find Trusted Suppliers</li>
+      <li>✔️ Expand your network</li>
+      <li>✔️ Enjoy Better Response</li>
+    </ul>
+    <button class="login-button">Click here to Login</button>
+  </section>
+
+  <section class="testimonials">
+    <h2>Buyer Testimonials</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p>Excellent prompt response and professional service. Good going, keep it up.</p>
+        <strong>Bisheshwar Mishra<br>Tata Motors, India</strong>
+        <button>Read More</button>
+      </div>
+      <div class="testimonial">
+        <p>I really appreciate you guys for your swift response. Thanks so much!</p>
+        <strong>Nimesh Kumar<br>Powergrid of India Ltd, India</strong>
+        <button>Read More</button>
+      </div>
+      <div class="testimonial">
+        <p>I am really happy with the extraordinary support from your representatives.</p>
+        <strong>Kapilesh Purohit<br>Jai Ma Shakti Health Products</strong>
+        <button>Read More</button>
+      </div>
+      <div class="testimonial">
+        <p>IndiaMART helps us reach many new segments and customers.</p>
+        <strong>Vijendra Rawat<br>Studio Kreative</strong>
+        <button>Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <h2>Explore related products from Premium Brands</h2>
+    <div class="brand-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/3M_wordmark.svg" alt="3M">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Greaves_Cotton_logo.svg" alt="Greaves">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Aludecor_logo.png" alt="Aludecor">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Kirloskar_Logo.svg" alt="Kirloskar">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Shell_logo.svg" alt="Shell">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Canon_wordmark.svg" alt="Canon">
+    </div>
+  </section>
+
+  <section class="more-for-you">
+    <div class="box">
+      <h4>Connect with verified sellers</h4>
+      <p>Tell us your requirement & get verified sellers for free.</p>
+      <button>Get verified sellers</button>
+    </div>
+    <div class="box">
+      <h4>Sell on IndiaMART for free</h4>
+      <p>Reach out to more than 4 crore buyers.</p>
+      <button>Start Selling</button>
+    </div>
+    <div class="box">
+      <h4>Download our App</h4>
+      <p>Get instant notifications on the go.</p>
+      <button>Download Now</button>
+    </div>
+    <div class="box">
+      <h4>Tally on Mobile</h4>
+      <p>Connect your Tally offline data to mobile app.</p>
+      <button>Know More</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
