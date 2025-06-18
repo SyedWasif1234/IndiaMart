@@ -1,0 +1,91 @@
+🔍 Description
+
+Create a backend API for an IndiaMART-like B2B platform, where users can register as buyers or sellers. Sellers can list products, and buyers can search and send inquiries. Admins can manage everything. This project helps you learn authentication, RBAC (Role-Based Access Control), product listings, and real-world marketplace workflows using PHP and MySQL.
+
+---
+
+ 🎯 End Goal
+
+* Modular PHP backend (MVC-like structure)
+* MySQL database
+* JWT-based authentication (or PHP session-based auth for simplicity)
+* Role-based route protection (buyer, seller, admin)
+* Clean API routes for managing users, products, and orders
+* Admin dashboard APIs
+* Postman collection to test each feature
+
+
+ 👥 Roles Involved
+
+* Buyer: Browse products, search, send inquiries
+* Seller: Add/edit/delete products, respond to inquiries
+* Admin: Manage users, moderate products, view analytics
+
+
+
+ 📊 Tables to be Created
+
+users          -- id, name, email, password, role (buyer/seller/admin)
+products       -- id, seller_id, title, description, price, category_id, image
+categories     -- id, name
+inquiries      -- id, product_id, buyer_id, message, status
+orders         -- optional (if you want to support order tracking)
+messages       -- optional for chat
+
+
+ 🧾 API Routes to Build
+
+ 🔐 Auth: ✅(DONE)
+
+* POST /auth/register → Register as buyer or seller
+* POST /auth/login → Login, return token/session
+* GET /auth/me → Get current user info
+
+
+
+
+ 🛒 Product Management:
+
+* GET /products → List all products (public)
+* GET /products/:id → Product detail (public)
+* POST /products → Seller only
+* PUT /products/:id → Seller only (own products)
+* DELETE /products/:id → Seller only or Admin
+
+📨 Inquiry System:
+
+* POST /inquiries → Buyer sends inquiry to seller
+* GET /inquiries → Seller/Admin views inquiries
+* PUT /inquiries/:id/respond → Seller responds
+
+    Sellers only get inquiries related to their own products.
+    Admins can still view all inquiries.
+    Buyers cannot access this route at all.
+
+ 🧑‍💼 Admin Panel:
+
+* GET /admin/users → List all users
+* DELETE /admin/users/:id → Delete user
+* PUT /admin/users/:id/role → Change user role
+* GET /admin/products → Moderate product listings
+
+ 🧠 Bonus Features (Optional)
+
+* 🔔 Notifications for new inquiries
+* 📅 Product expiry or promotion timer
+* 📂 CSV product export (admin)
+* 🛒 Add cart + order flow
+* 📈 Admin dashboard analytics (products per seller, inquiry stats)
+
+
+
+ ✅ Deliverables Checklist
+
+* [x] Auth system (Login/Register)
+* [x] Role-based route access
+* [x] Product listing CRUD
+* [x] Inquiry system between buyer and seller
+* [x] Admin routes (manage users/products)
+* [x] Postman collection for API testing
+* [x] Clean MVC-style folder structure
+* [x] MySQL schema with proper relationships
