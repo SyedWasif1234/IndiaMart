@@ -89,3 +89,53 @@ messages       -- optional for chat
 * [x] Postman collection for API testing
 * [x] Clean MVC-style folder structure
 * [x] MySQL schema with proper relationships
+
+USE MEMO()
+
+    Imagine this:
+    You're running a restaurant.
+    You make tea for customers.
+    Making tea takes 10 minutes.
+
+    Now, a customer comes and says:
+
+    "Give me 1 cup of tea."
+
+    You go to the kitchen and make it from scratch.
+    ✅ That’s fine.
+
+    But then 2 seconds later, the same customer says:
+
+    "Can I get the same tea again?"
+
+    You say:
+
+    "Oh! I’ll make it again from scratch."
+
+    That’s a waste of time ⏳, right?
+
+    So what’s smarter?
+    You say:
+
+    "I already made that tea. I’ll keep it ready in a flask, so if the same order comes again, I’ll just serve it instantly!"
+
+    ✅ That’s what useMemo does!
+
+    In React:
+    
+        Your app keeps showing things on the screen (like name, number, product list).
+        React re-renders (refreshes) the screen every time something changes.
+        But sometimes you’re recalculating something heavy, like:
+        A big math formula
+        Filtering 1000 products
+        Sorting large lists
+        Even if nothing important changed, React still runs that logic again — which is slow.
+
+    useMemo says:
+
+        “Don’t do the work again unless it’s really needed.”
+        It remembers the result of that big calculation, like tea in a flask.
+border-r
+border-l
+border-t
+border-d
