@@ -139,3 +139,11 @@ border-r
 border-l
 border-t
 border-d
+
+JSON.stringify(value, replacer, space)
+
+flex: makes the buttons sit horizontally.
+flex-1: makes each child take equal width.
+gap-2: adds space between them.
+w-full inside the button tag inside Link ensures full usage of the flexed width.
+
