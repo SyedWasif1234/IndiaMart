@@ -36,7 +36,7 @@ const ProductDetail = () => {
           <div className="flex gap-4 mt-4">
             <Link to={`/Inquiry-form/${product?.id}`}>
              <button className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded font-semibold shadow">
-              Sent Inquiry
+              send Inquiry
             </button>
             </Link>
             <button className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded font-semibold shadow">

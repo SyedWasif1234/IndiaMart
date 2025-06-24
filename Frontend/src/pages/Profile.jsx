@@ -21,8 +21,8 @@ const Profile = () => {
     }
 
   return (
-    <div className="bg-gray-100  text-white min-h-screen px-6 pt-10 pb-10 flex justify-center items-start">
-      <div className="bg-teal-900 text-white rounded-lg shadow-md p-6 w-full ">
+    <div className="bg-gray-900  text-white min-h-screen px-6 pt-10 pb-10 flex justify-center items-start">
+      <div className="bg-gray-700 text-white rounded-lg shadow-md p-6 w-full ">
         <div className="flex flex-col md:flex-row gap-6">
           {/* Left: Profile Image and Work Info */}
           <div className="flex flex-col items-center md:items-start w-full md:w-1/3 text-gray-300">

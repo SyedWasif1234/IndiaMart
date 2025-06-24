@@ -13,7 +13,8 @@ export const useInquiryStore = create((set)=>({
         try {
             set({isInquiriesLoading:true})
             const res= await axiosInstace.get("/inquiries")
-            console.log(res)
+            set({inquiries:res.data})
+            console.log("fetched Inquires : ",res.data)
             toast.success("Inquiry fetched successfully")
         } catch (error) {
             console.log("error occured while fetching inquiry",error),

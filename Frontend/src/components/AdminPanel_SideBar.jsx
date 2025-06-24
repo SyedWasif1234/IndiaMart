@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 
 const AdminPanel_SideBar = () => {
   return (
-    <div className="w-60 bg-white border-r h-screen space-y-4">
+    <div className="w-60 bg-white border-r flex-shrink-0">
       <aside className="w-60 bg-white border-r">
         <div className="px-4 py-4 text-xl font-bold border-b border-gray-200 text-gray-700">
           Admin Panel
