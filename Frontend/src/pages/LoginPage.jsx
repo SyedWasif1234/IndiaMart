@@ -14,7 +14,7 @@ import {
 
 
 import {z} from "zod";
-import { useAuthstore } from '../store/UseAuthStore';
+import { useAuthstore } from '../store/useAuthStore';
 
 const LoginSchema = z.object({
   email:z.string().email("Enter a valid email"),

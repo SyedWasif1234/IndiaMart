@@ -14,7 +14,7 @@ import {
 
 
 import {z} from "zod";
-import { useAuthstore } from '../store/UseAuthStore';
+import { useAuthstore } from '../store/useAuthStore';
 
 const SignUpSchema = z.object({
     email:z.string().email("Enter a valid email"),
@@ -103,7 +103,6 @@ const SignUpPage = () => {
                  {isSigningUp ? (
                   <>
                     <Loader2 className="h-5 w-5 animate-spin" />
-                    Loading...
                   </>
                 ) : (
                   "Sign Up"
