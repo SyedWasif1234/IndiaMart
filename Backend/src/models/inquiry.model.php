@@ -19,7 +19,6 @@ class InquiryModel {
         WHERE p.seller_id = ?
         ORDER BY i.created_at DESC
     ");
-
     $stmt->execute([$sellerId]);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
