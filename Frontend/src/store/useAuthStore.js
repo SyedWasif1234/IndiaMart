@@ -44,7 +44,7 @@ export const useAuthstore = create((set)=>({
         }
     },
 
-    logout: async()=>{} ,
+    logout: async()=>{ } ,
 
     me:async () => {
         set({isGettingMe:true})

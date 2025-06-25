@@ -147,3 +147,15 @@ flex-1: makes each child take equal width.
 gap-2: adds space between them.
 w-full inside the button tag inside Link ensures full usage of the flexed width.
 
+//  i did this in adminside bar section because niche gap arha tha
+- <div className="  w-60 bg-white border-r h-screen space-y-4">
++ <div className="w-60 bg-white border-r flex-shrink-0">
+That’s it—because:
+
+The outer wrapper in AdminLayout already has
+flex min-h-screen, so it always reaches the bottom of the viewport (and
+beyond when your page is taller).
+
+With flex-shrink-0 (or even no height class at all) the <aside> will
+simply grow to the same height as the wrapper, eliminating the gap.
+//
