@@ -4,6 +4,7 @@ import { useState , useEffect } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { Loader } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { usePaymentStore } from '../store/usePaymentStore'
 
 const ProductDetail = () => {
 
@@ -19,13 +20,26 @@ const ProductDetail = () => {
 
     console.log("product details : ",product)
 
-   if(isProductLoading){
+  
+
+    const {createPayment , isPaymentProceeding , payment} = usePaymentStore();
+
+
+   const handlePayment = (product) => {
+      const pricePaise = product?.price * 100;
+      createPayment(pricePaise);
+    };
+
+   
+ if(isProductLoading){
          return (
             <div className="flex items-center justify-center h-screen">
                 <Loader className="size-10 animate-spin"/>
             </div>
         )
     }
+    
+  
 
   return (
     <div className="bg-white min-h-screen p-6 font-sans">
@@ -39,8 +53,8 @@ const ProductDetail = () => {
               send Inquiry
             </button>
             </Link>
-            <button className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded font-semibold shadow">
-             feature 2
+            <button  onClick={()=>handlePayment(product)} className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded font-semibold shadow" >
+             Order
             </button>
           </div>
         </div>
