@@ -16,6 +16,7 @@ import ProductDetail from './components/ProductDetail'
 import B2CProductDetail from './components/B2CProductDetail'
 import AddInquiry from './pages/AddInquiry'
 import GetInquiries from './pages/GetInquiries'
+import OrderPage from './pages/OrderPage'
 
 import AdminLayout from './layout/AdminLayout'
 import UsersPage from './AdminComponents/UsersPage'
@@ -43,7 +44,9 @@ const App = () => {
           <Route path="/Inquiry-form/:id" element={ authUser ? <AddInquiry/> : <Navigate to = "/Login" /> } />
           <Route path="/get-Inquiries" element = {authUser?.role === "SELLER" ? <GetInquiries/> : <Navigate to = "/" /> } />
           
-            <Route path="/B2Bproduct/:id" element={<ProductDetail />} />
+          <Route path="/B2Bproduct/:id" element={<ProductDetail />} />
+
+          <Route path="/order/:id" element={ authUser ? <OrderPage/> : <Navigate to = "/Login" /> } />
         </Route>
   
         <Route path='/Admin-Panel' element={authUser?.role === "ADMIN" ?  <AdminLayout/> : <Navigate to = "/" /> }>

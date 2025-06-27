@@ -11,8 +11,6 @@ const B2CProductDetail = () => {
     const {id} = useParams()
     const {product , getProductById , isProductLoading} = useProductStore()
 
-
-  
        useEffect(() => {
         getProductById(id)
     },[id ])
@@ -48,9 +46,11 @@ const B2CProductDetail = () => {
         <div className="flex flex-col items-center">
           <img src={product?.image} alt="product" className="w-full max-w-xs object-contain" />
           <div className="flex gap-4 mt-4">
-            <button  onClick={()=>handlePayment(product)} className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded font-semibold shadow" >
+           <Link to={`/order/${product?.id}`}>
+            <button  className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded font-semibold shadow" >
              Order
             </button>
+           </Link>
           </div>
         </div>
 
