@@ -6,7 +6,7 @@ import { Loader } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { usePaymentStore } from '../store/usePaymentStore'
 
-const ProductDetail = () => {
+const B2CProductDetail = () => {
 
     const {id} = useParams()
     const {product , getProductById , isProductLoading} = useProductStore()
@@ -48,11 +48,9 @@ const ProductDetail = () => {
         <div className="flex flex-col items-center">
           <img src={product?.image} alt="product" className="w-full max-w-xs object-contain" />
           <div className="flex gap-4 mt-4">
-            <Link to={`/Inquiry-form/${product?.id}`}>
-             <button className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded font-semibold shadow">
-              send Inquiry
+            <button  onClick={()=>handlePayment(product)} className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded font-semibold shadow" >
+             Order
             </button>
-            </Link>
           </div>
         </div>
 
@@ -92,5 +90,5 @@ const ProductDetail = () => {
   )
 }
 
-export default ProductDetail
+export default B2CProductDetail
 

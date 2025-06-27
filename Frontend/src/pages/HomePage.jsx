@@ -3,7 +3,8 @@ import { useProductStore } from '../store/useProductStore';
 import { useEffect } from 'react';
 import {Loader} from "lucide-react"
 import SideBar from '../components/SideBar';
-import LoadProducts from '../components/LoadProducts';
+import B2CLoadProducts from '../components/LoadProducts';
+import HomepageProductLoad from '../components/HomepageProductLoad';
 import PopularCategories from '../components/PopularCategories';
 
 const HomePage = () => {
@@ -41,12 +42,15 @@ const HomePage = () => {
           <h1 className="text-2xl font-semibold  text-gray-600 mb-4">Welcome to Mart</h1>
         
           {/* Replace below with your content */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-800">
+          <div className="min-h-screen flex flex-col bg-gray-100">
+        <h1 className="text-2xl font-semibold  text-gray-600 mb-4"></h1>
 
-           
-            {/* Example content */}
-          
-          </div>
+         {products.length > 0 ? <HomepageProductLoad products={products}/> : (
+             <p className="mt-10 text-center text-lg font-semibold text-gray-500 dark:text-gray-400 z-10 border border-primary px-4 py-2 rounded-md border-dashed">
+              No problems found
+            </p>
+           )}
+    </div>
         </div>
       </div>
     </div>

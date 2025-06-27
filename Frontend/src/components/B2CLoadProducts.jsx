@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const LoadProducts = ({ products }) => {
+const B2CLoadProducts = ({ products }) => {
     console.log(products)
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
@@ -32,7 +32,7 @@ const LoadProducts = ({ products }) => {
             </div>
 
            <div className='flex gap-2  '>
-            <Link to = {`/B2Bproduct/${product.id}` } className='flex-1'>
+            <Link to = {`/B2Cproduct/${product.id}` } className='flex-1'>
                 <button className="mt-4 w-full border border-gray-300 text-gray-800 font-semibold py-1 rounded hover:bg-teal-800 hover:text-white transition">
                     Details
                 </button>
@@ -45,4 +45,4 @@ const LoadProducts = ({ products }) => {
   );
 };
 
-export default LoadProducts;
+export default B2CLoadProducts;

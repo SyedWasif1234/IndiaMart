@@ -31,6 +31,11 @@ switch ($match) {
           AuthController::me();
         break;
 
+    case 'POST /logout':
+        authMiddleware();
+        AuthController::logout();
+        break;
+
     default:
         http_response_code(404);
         echo json_encode(["message" => "Auth Route not found"]);

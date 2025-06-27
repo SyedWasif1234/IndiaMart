@@ -12,6 +12,7 @@ export const useAuthstore = create((set)=>({
     isLogedIn : false,
     isCheckingAuth : false ,
     isGettingMe:false ,
+    isLoggingOut:false,
     //function shich we use globally
 
     signUp: async (data) =>{
@@ -44,7 +45,17 @@ export const useAuthstore = create((set)=>({
         }
     },
 
-    logout: async()=>{ } ,
+    logout: async()=>{
+        try {
+            await axiosInstace.post("/auth/logout")
+        } catch (error) {
+            toast.error("error logging out")
+        }
+        finally{
+            set({authUser:null , isLogedIn:false})
+            toast.success("Logout successful")
+        }
+     } ,
 
     me:async () => {
         set({isGettingMe:true})

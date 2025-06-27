@@ -18,10 +18,18 @@ const SideBar = () => {
             </Link>
         </li>
         )}
-       <Link to = "/Products" className='flex items-center gap-2 hover:bg-teal-700 hover:text-white p-2 rounded '>
+       <li>
+          <Link to = "/B2BProducts" className='flex items-center gap-2 hover:bg-teal-700 hover:text-white p-2 rounded '>
             <Store className="w-4 h-4" />
-                Products
+                B2B section
             </Link>
+       </li>
+         <li>
+          <Link to = "/B2CProducts" className='flex items-center gap-2 hover:bg-teal-700 hover:text-white p-2 rounded '>
+            <Store className="w-4 h-4" />
+                B2C section
+            </Link>
+       </li>
        <li>
             <Link to = "/Category" className='flex items-center gap-2 hover:bg-teal-700 hover:text-white p-2 rounded '>
             <Folder className="w-4 h-4" />

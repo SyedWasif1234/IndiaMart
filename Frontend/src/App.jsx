@@ -10,8 +10,10 @@ import { useAuthstore } from './store/useAuthStore'
 import Layout from './layout/Layout'
 import Profile from './pages/Profile'
 import AddProduct from './pages/AddProduct'
-import ProductsPage from './pages/ProductsPage'
+import B2BProductsPage from './pages/B2BProductsPage'
+import B2CProductsPage from './pages/B2CProductsPage'
 import ProductDetail from './components/ProductDetail'
+import B2CProductDetail from './components/B2CProductDetail'
 import AddInquiry from './pages/AddInquiry'
 import GetInquiries from './pages/GetInquiries'
 
@@ -34,12 +36,14 @@ const App = () => {
           <Route path="/" element = {authUser ? <HomePage/> : <Navigate to = "/Login" />} />
           <Route path="/profile" element={ authUser ? <Profile /> : <Navigate to = "/Login" />} />
           <Route path="/add-product" element={ authUser ? <AddProduct/> : <Navigate to = "/Login" /> } />
-          <Route path='/Products' element={ authUser ? <ProductsPage/> : <Navigate to = "/Login" /> } />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path='/B2CProducts' element={ authUser ? <B2CProductsPage/> : <Navigate to = "/Login" /> } />
+          <Route path='/B2BProducts' element={ authUser ? <B2BProductsPage/> : <Navigate to = "/Login" /> } />
+          <Route path="/B2Cproduct/:id" element={<B2CProductDetail />} />
+        
           <Route path="/Inquiry-form/:id" element={ authUser ? <AddInquiry/> : <Navigate to = "/Login" /> } />
           <Route path="/get-Inquiries" element = {authUser?.role === "SELLER" ? <GetInquiries/> : <Navigate to = "/" /> } />
           
-
+            <Route path="/B2Bproduct/:id" element={<ProductDetail />} />
         </Route>
   
         <Route path='/Admin-Panel' element={authUser?.role === "ADMIN" ?  <AdminLayout/> : <Navigate to = "/" /> }>

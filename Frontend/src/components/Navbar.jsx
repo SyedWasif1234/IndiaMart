@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import { useState } from 'react';
 import {
   Home,
@@ -13,13 +13,12 @@ import { set } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import LogoutButton from "./LogoutButton"
 
+
 const Navbar = () => {
-    const {authUser} = useAuthstore();
+    const {authUser ,  logout} = useAuthstore();
 
     const [search , setSearch] = useState(false)
     const [isOpen , setisOpen] = useState(false);
-
-
 
 
   return (
@@ -80,7 +79,7 @@ const Navbar = () => {
                             )}
 
                             <li>
-                                 <LogoutButton  className="flex items-center gap-2 px-2 py-2 rounded text-red-900  hover:bg-red-900 text-sm">
+                                 <LogoutButton className="flex items-center gap-2 px-2 py-2 rounded text-red-900  hover:bg-red-900 text-sm">
                                     <LogOut className="w-4 h-4" />
                                     Logout
                                 </LogoutButton>

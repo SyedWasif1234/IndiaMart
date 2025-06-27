@@ -97,4 +97,15 @@ class AuthController {
         ]);
     }
 
+    public static function logout() {
+        // Delete cookie
+        setcookie("jwt", "", [
+            'expires' => time() - 3600,
+            'httponly' => true,
+            'path' => '/',  // apply to all routes
+            'samesite' => 'Lax', // or 'None' if using cross-site
+        ]);
+        echo json_encode(["message" => "Logout successful"]);
+    }
+
 }
