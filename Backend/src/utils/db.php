@@ -3,7 +3,7 @@ function getDBConnection() {
     $host = 'localhost';
     $db   = 'indiamart_db';
     $user = 'root';
-    $pass = 'wasif12345';
+    $pass = 'My-secret-password-of-database';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
