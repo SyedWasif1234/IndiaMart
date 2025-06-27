@@ -48,6 +48,10 @@ switch (true) {
         require_once __DIR__ . '/routes/payment.router.php';
         break;
 
+    case preg_match('/^orders/', $endpoint):
+        require_once __DIR__ . '/routes/order.router.php';
+        break;
+
     default:
         http_response_code(404);
         echo json_encode(['error' => 'Endpoint not found']);
